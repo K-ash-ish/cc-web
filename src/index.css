@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hero-section {
+  background-color: rgba(83, 86, 255, 0.8);
+}
+.hero-image {
+  background-image: url("./math-doodle.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+  filter: blur(10px);
+  width: 100%;
+  height: 100%;
+}
+
+.testimonials {
+}
