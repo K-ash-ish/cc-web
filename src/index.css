@@ -3,7 +3,9 @@
 @tailwind utilities;
 
 .hero-section {
-  background-color: rgba(83, 86, 255, 0.8);
+  /* background-color: #5356ffcc; */
+  background-color: #41c9e2;
+  /* background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%); */
 }
 .hero-image {
   background-image: url("./math-doodle.png");
@@ -13,6 +15,25 @@
   filter: blur(10px);
   width: 100%;
   height: 100%;
+}
+.call-btn {
+  /* background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%); */
+  background-color: #f89b29;
+  box-shadow: #fbf6f1 1px 1px 80px;
+}
+.card-blue {
+  background-color: #00e3b7;
+  box-shadow: #00e3b7 1px 1px 40px;
+}
+.card-green {
+  background-color: #94f28a;
+
+  box-shadow: #94f28a 1px 1px 40px;
+}
+.card-yellow {
+  background-color: #f9f871;
+
+  box-shadow: #f9f871 1px 1px 40px;
 }
 
 .testimonials {

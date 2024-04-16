@@ -9,7 +9,7 @@ import {
 } from "../ui/navigation-menu";
 function Navbar() {
   return (
-    <div className="  flex justify-between items-center py-4 px-2 bg-white   ">
+    <div className="  flex justify-between items-center py-4 px-2 bg-white  ">
       <h1 className="text-xl font-light">Some Logo</h1>
       <NavigationMenu className="">
         <NavigationMenuList>

@@ -1,21 +1,26 @@
 function HeroSection() {
   return (
-    <div className=" hero-section h-full md:flex md:justify-center md:items-center relative overflow-hidden">
-      <div className="border-2 md:w-[40%] md:h-[40%] text-white md:flex md:flex-col md:gap-10 md:items-center  z-10">
-        <div className="">
-          <h1 className="text-5xl font-bold my-2  ">
-            Lorem ipsum dolor sit amet consectetur.
+    <div className="hero-section  h-full flex  md:justify-around items-center  relative overflow-hidden">
+      <div className=" md:w-[40%] h-[70%]  md:h-[60%] text-white flex flex-col md:gap-10  items-center md:justify-around justify-evenly z-10">
+        <div className="px-4  h-1/2 flex flex-col justify-around gap-2 md:h-auto">
+          <h1 className="md:text-5xl text-6xl font-bold md:my-2  ">
+            Ace Your Exams with Us
           </h1>
-          <p className="font-thin">
+          <p className="font-thin text-xl md:text-base  w-5/6">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
             maxime ab assumenda, culpa totam dolorum quasi odit velit nam.
           </p>
         </div>
-        <button className="border-2">Schedule a call</button>
+        <button className="call-btn px-6 py-3 animate-[]   rounded-lg  text-white  transition-all duration-700  bg-purple-700 focus:ring-4  focus:ring-pink-200  capitalize  font-medium   flex">
+          Schedule a call
+        </button>
       </div>
-      <div className="absolute hero-image">
-        {/* <img src="/math-doodle.png" alt="" /> */}
+      <div className="md:min-w-[40%] hidden   z-10 md:h-[40%] md:flex  md:justify-center ">
+        <img src="" alt="logo" className="" width={200} height={200} />
       </div>
+      {/* <div className="absolute hero-image top-0  "> */}
+      {/* <img src="/math-doodle.png" alt="" /> */}
+      {/* </div> */}
     </div>
   );
 }
