@@ -1,3 +1,5 @@
+import { Mail, MapPin, PhoneCallIcon } from "lucide-react";
+
 function Footer() {
   const socialMedia = [
     {
@@ -40,30 +42,40 @@ function Footer() {
         </div>
       </div>
 
-      <div className="md:flex md:flex-col md:items-start  gap-3 capitalize ">
+      <div className="md:flex md:flex-col md:items-start  md:max-w-[40%]  gap-3 capitalize ">
         <h3 className="text-xl font-bold md:block hidden text-[#F89035] ">
           Contact us
         </h3>
-        <ul className="flex justify-around md:flex-col gap-3  ">
-          <li className="lowercase">
-            <span className="font-semibold md:inline hidden capitalize pr-1 ">
-              Email:
-            </span>
+        <ul className="flex justify-around  md:flex-col gap-3  text-sm md:text-base ">
+          <li className="lowercase flex items-center  md:gap-2 ">
+            <Mail
+              color="#f89035"
+              size={16}
+              className="hidden md:inline-block"
+            />
             {contactDetails?.email}{" "}
             <span className="md:hidden inline text-orange-400">|</span>
           </li>
-          <li className="">
-            <span className="font-semibold md:inline hidden capitalize pr-1 ">
-              Mobile:
-            </span>
-            +91 {contactDetails?.mobile}{" "}
+          <li className="flex items-center gap-2">
+            <PhoneCallIcon
+              color="#f89035"
+              size={16}
+              className="hidden md:inline-block"
+            />
+            +91{contactDetails?.mobile}
             <span className="md:hidden inline text-orange-400">|</span>
           </li>
-          <li className="md:w-4/6 flex-1">
-            <span className="font-semibold md:inline hidden capitalize pr-1 ">
-              Address:
-            </span>
-            {contactDetails?.addres}
+          <li className=" flex items-center gap-2">
+            <MapPin
+              color="#f89035"
+              size={16}
+              className="hidden md:inline-block"
+            />
+            <p className="md:w-5/6 ">
+              {contactDetails?.addres} Lorem ipsum dolor sit amet, consectetur
+              adipisicing elit. Officiis saepe id veritatis cupiditate, odio
+              voluptates alias! Expedita fugit
+            </p>
           </li>
         </ul>
       </div>

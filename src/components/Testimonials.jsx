@@ -16,6 +16,7 @@ function Testimonials() {
       items: 1,
     },
   };
+
   const studentReviews = [
     {
       name: "Some Name",
