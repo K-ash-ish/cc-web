@@ -8,7 +8,7 @@
   background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
 }
 .hero-image {
-  background-image: url("./math-doodle.png");
+  background-image: url("/math-doodle.png");
   background-size: cover;
   background-repeat: no-repeat;
   opacity: 0.6;

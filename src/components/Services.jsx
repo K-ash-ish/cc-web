@@ -25,7 +25,7 @@ function Services() {
     },
   ];
   return (
-    <section className="bg-white md:min-h-[500px] flex flex-col justify-center md:gap-10 border-2 border-green-400">
+    <section className="bg-white md:min-h-[500px] flex flex-col justify-center md:gap-10 ">
       <h2 className="text-3xl font-bold  text-center self-center my-2 text-[#FE478B] ">
         Support and Guidance
       </h2>

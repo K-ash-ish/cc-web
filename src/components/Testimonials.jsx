@@ -43,7 +43,7 @@ function Testimonials() {
     },
   ];
   return (
-    <section className="bg-[#41C9E2] testimonials  md:h-full capitalize flex flex-col items-center gap-4 py-2 ">
+    <section className="bg-[#41C9E2] testimonials  md:h-full capitalize flex flex-col items-center gap-6 py-2 ">
       <div className=" bg-rose-500 shadow-rose-500 shadow-md text-white md:px-4 px-3 py-2 md:py-2 rounded-md md:text-2xl font-medium">
         Testimonials
       </div>
@@ -66,7 +66,7 @@ function Testimonials() {
         transitionDuration={"700"}
         slidesToSlide={1}
         containerClass=" w-5/6 h-full "
-        itemClass="  bg-white  text-center flex flex-col  justify-center  md:p-4  md:mx-4 mx-1 px-2 py-4  rounded-lg shadow-md shadow-zinc-400 md:min-h-[350px] min-h-[200px]  "
+        itemClass=" card bg-white  text-center flex flex-col  justify-center  md:p-4  md:mx-4 mx-1 px-2 py-4  rounded-2xl  md:min-h-[350px] min-h-[200px]  "
       >
         {studentReviews?.map((review, i) => {
           return (
