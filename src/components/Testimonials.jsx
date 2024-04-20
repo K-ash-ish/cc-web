@@ -70,7 +70,10 @@ function Testimonials() {
       >
         {studentReviews?.map((review, i) => {
           return (
-            <div key={i} className="flex flex-col justify-center gap-10 h-full">
+            <div
+              key={i}
+              className="flex flex-col justify-center  gap-10 h-full"
+            >
               <p className="font-thin ">
                 "
                 {review?.message.length < 350
@@ -78,7 +81,7 @@ function Testimonials() {
                   : review?.message?.slice(0, 350) + "..."}
                 "
               </p>
-              <p className="italic my-1 ">
+              <p className="italic my-1  text-[#F89035] ">
                 {review?.name}{" "}
                 <span className="font-bold">{review.percentage}</span>
               </p>
