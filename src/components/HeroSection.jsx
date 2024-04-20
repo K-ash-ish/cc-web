@@ -11,16 +11,22 @@ function HeroSection() {
             maxime ab assumenda, culpa totam dolorum quasi odit velit nam.
           </p>
         </div>
-        <button className="call-btn px-6 py-3 animate-[]   rounded-lg  text-white  transition-all duration-700  bg-purple-700 focus:ring-4  focus:ring-pink-200  capitalize  font-medium   flex">
+        <button className="call-btn px-6 py-3    rounded-lg  text-white  transition-all duration-700  bg-purple-700 focus:ring-4  focus:ring-pink-200  capitalize  font-medium   flex">
           Schedule a call
         </button>
       </div>
-      <div className="md:min-w-[40%] hidden   z-10 md:h-[40%] md:flex  md:justify-center ">
-        <img src="" alt="logo" className="" width={200} height={200} />
+      <div className=" hidden hero-logo z-10 md:flex bg-white min-w-[400px] min-h-[400px]  md:justify-center rounded-full  ">
+        <img
+          src="unnamed.webp"
+          alt="logo"
+          className="max-w-full max-h-full align-middle  object-contain "
+          // width={200}
+          // height={200}
+        />
       </div>
-      {/* <div className="absolute hero-image top-0  "> */}
-      {/* <img src="/math-doodle.png" alt="" /> */}
-      {/* </div> */}
+      <div className="absolute hero-image top-0  ">
+        {/* <img src="/math-doodle.png" alt="" /> */}
+      </div>
     </div>
   );
 }

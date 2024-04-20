@@ -4,8 +4,8 @@
 
 .hero-section {
   /* background-color: #5356ffcc; */
-  background-color: #41c9e2;
-  /* background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%); */
+  /* background-color: #41c9e2; */
+  background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
 }
 .hero-image {
   background-image: url("./math-doodle.png");
@@ -21,6 +21,10 @@
   background-color: #f89b29;
   box-shadow: #fbf6f1 1px 1px 80px;
 }
+.card {
+  box-shadow: rgba(148, 153, 152, 0.384) 1px 1px 40px;
+}
+
 .card-blue {
   background-color: #00e3b7;
   box-shadow: #00e3b7 1px 1px 40px;
@@ -32,9 +36,8 @@
 }
 .card-yellow {
   background-color: #f9f871;
-
-  box-shadow: #f9f871 1px 1px 40px;
 }
 
 .testimonials {
+  background: linear-gradient(-45deg, #f89b29 0%, rgb(255, 15, 123, 0.8) 100%);
 }
