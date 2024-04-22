@@ -1,3 +1,5 @@
+import About from "./components/About";
+import Contact from "./components/Contact";
 import HeroSection from "./components/HeroSection";
 import Services from "./components/Services";
 import Testimonials from "./components/Testimonials";
@@ -8,9 +10,7 @@ function App() {
   return (
     <div className=" w-full h-screen  ">
       <Navbar />
-      <HeroSection />
-      <Services />
-      <Testimonials />
+      <About />
       <Footer />
     </div>
   );

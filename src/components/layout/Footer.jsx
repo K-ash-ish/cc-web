@@ -21,7 +21,7 @@ function Footer() {
     addres: "Some line Lorem ipsum dolor sit amet consectetur ",
   };
   return (
-    <footer className="md:min-h-[320px] flex md:flex-row flex-col md:gap-0 gap-3 md:justify-evenly md:items-center  mx-2  border-2 ">
+    <footer className="md:min-h-[320px] flex md:flex-row flex-col md:gap-0 gap-3 md:justify-evenly md:items-center  mx-2   ">
       <div className="flex justify-around items-center md:flex-col md:justify-normal md:items-start  gap-3 capitalize ">
         <div className="  md:flex bg-white   md:justify-start  ">
           <img
