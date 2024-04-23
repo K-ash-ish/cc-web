@@ -10,6 +10,7 @@ function App() {
   return (
     <div className=" w-full h-screen  ">
       <Navbar />
+      {/* <Contact /> */}
       <About />
       <Footer />
     </div>

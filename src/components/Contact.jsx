@@ -15,9 +15,9 @@ function Contact() {
   });
 
   return (
-    <section className="     flex  min-h-[80%]  md:w-5/6 md:mx-auto md:my-4  ">
-      <div className=" md:flex md:flex-col md:justify-evenly  md:w-1/2 ">
-        <div className="  md:flex md:flex-col bg-white   md: items-center w-full  ">
+    <section className="     flex flex-col items-center md:items-stretch md:flex-row  min-h-[80%]  md:w-5/6 md:mx-auto md:my-4 my-2 ">
+      <div className="  flex  flex-col gap-4 md:gap-0 md:justify-evenly md:my-0 my-2  md:w-1/2 w-4/5 ">
+        <div className="  flex flex-col  items-center w-full  ">
           <img
             src="unnamed.webp"
             alt="logo"
@@ -44,7 +44,7 @@ function Contact() {
           </p>
         </div>
       </div>
-      <div className="w-1/2 justify-around md:flex md:flex-col">
+      <div className="md:w-1/2 w-4/5 shadow-lg shadow-orange-100 rounded-2xl py-4 md:py-0 md:shadow-none justify-around md:flex md:flex-col">
         <div className="w-1/2 mx-auto ">
           <Form {...form}>
             <form className="space-y-4 my-4">

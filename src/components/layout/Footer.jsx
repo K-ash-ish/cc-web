@@ -21,9 +21,9 @@ function Footer() {
     addres: "Some line Lorem ipsum dolor sit amet consectetur ",
   };
   return (
-    <footer className="md:min-h-[320px] flex md:flex-row flex-col md:gap-0 gap-3 md:justify-evenly md:items-center  mx-2   ">
-      <div className="flex justify-around items-center md:flex-col md:justify-normal md:items-start  gap-3 capitalize ">
-        <div className="  md:flex bg-white   md:justify-start  ">
+    <footer className="md:min-h-[320px] flex md:flex-row flex-col md:gap-0 gap-3 md:justify-evenly md:items-center md:border-none border-2 border-dashed border-orange-200 rounded-2xl py-4 px-2 md:px-0 md:py-2 md:my-0 my-4 mx-2    ">
+      <div className=" flex justify-around items-center md:flex-col md:justify-normal md:items-start  gap-3 capitalize ">
+        <div className="  md:flex md:justify-start  ">
           <img
             src="unnamed.webp"
             alt="logo"
@@ -46,7 +46,7 @@ function Footer() {
         <h3 className="text-xl font-bold md:block hidden text-[#F89035] ">
           Contact us
         </h3>
-        <ul className="flex justify-around  md:flex-col gap-3  text-sm md:text-base ">
+        <ul className="  flex flex-col md:gap-3 gap-2  text-sm md:text-base ">
           <li className="lowercase flex items-center  md:gap-2 ">
             <Mail
               color="#f89035"
@@ -54,7 +54,6 @@ function Footer() {
               className="hidden md:inline-block"
             />
             {contactDetails?.email}{" "}
-            <span className="md:hidden inline text-orange-400">|</span>
           </li>
           <li className="flex items-center gap-2">
             <PhoneCallIcon
@@ -63,7 +62,6 @@ function Footer() {
               className="hidden md:inline-block"
             />
             +91{contactDetails?.mobile}
-            <span className="md:hidden inline text-orange-400">|</span>
           </li>
           <li className=" flex items-center gap-2">
             <MapPin
@@ -73,8 +71,7 @@ function Footer() {
             />
             <p className="md:w-5/6 ">
               {contactDetails?.addres} Lorem ipsum dolor sit amet, consectetur
-              adipisicing elit. Officiis saepe id veritatis cupiditate, odio
-              voluptates alias! Expedita fugit
+              adipisicing elit. Officiis
             </p>
           </li>
         </ul>
