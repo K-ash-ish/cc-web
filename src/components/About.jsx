@@ -2,7 +2,7 @@ import React from "react";
 
 function About() {
   return (
-    <section className=" card rounded-2xl min-h-full  md:w-4/6 w-4/5 mx-auto my-4 flex flex-col  ">
+    <section className="bg-white card rounded-2xl min-h-full  md:w-4/6 w-4/5 mx-auto my-4 flex flex-col  ">
       <div className="  flex flex-col  items-center w-full  ">
         <img
           src="unnamed.webp"
@@ -38,7 +38,7 @@ function About() {
           <h3 className="md:text-2xl text-xl font-semibold ">
             Meet Our faculty
           </h3>
-          <p className="px-4 font-thin leading-loose md:text-xl md:my-2">
+          <div className="px-4 font-thin leading-loose md:text-xl md:my-2">
             <div className="   flex flex-col   float-right  ">
               <img
                 src=""
@@ -56,7 +56,7 @@ function About() {
             repudiandae suscipit dolor quaerat! Architecto alias temporibus
             dolores dolorem aperiam harum iure amet quia eum aspernatur quod id,
             cumque ipsa aut. lore
-          </p>
+          </div>
         </div>
       </div>
     </section>

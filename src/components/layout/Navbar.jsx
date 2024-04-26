@@ -1,3 +1,4 @@
+import { Link, NavLink } from "react-router-dom";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -7,58 +8,58 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "../ui/navigation-menu";
+
 function Navbar() {
   return (
-    <div className="  flex justify-between items-center py-4 px-2 bg-white  ">
-      <h1 className="text-xl font-light">Some Logo</h1>
-      <NavigationMenu className="">
+    <div className=" w-full shadow-sm shadow-gray-300 rounded-b-xl   mx-auto flex justify-end items-center py-4  bg-white   px-4 min-h-20 ">
+      <NavigationMenu>
         <NavigationMenuList>
-          <NavigationMenuItem className="">
-            <NavigationMenuLink className={navigationMenuTriggerStyle() + " "}>
-              <a href="" className="text-xl font-thin ">
+          <NavigationMenuItem>
+            <NavLink
+              to="/"
+              className={({ isActive, isPending }) =>
+                isActive
+                  ? "underline  underline-offset-4 decoration-orange-500"
+                  : ""
+              }
+            >
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                 Home
-              </a>
-            </NavigationMenuLink>
+              </NavigationMenuLink>
+            </NavLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuTrigger className="text-xl ">
-              Courses
-            </NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="w-[250px] flex flex-col">
-                <li className="border-2 border-red-500">
-                  <NavigationMenuLink asChild>
-                    <a href="/" className="flex">
-                      One
-                    </a>
-                  </NavigationMenuLink>
-                </li>
-                <li>
-                  <NavigationMenuLink asChild>
-                    <a href="">One</a>
-                  </NavigationMenuLink>
-                </li>
-                <li>
-                  <NavigationMenuLink asChild>
-                    <a href="">One</a>
-                  </NavigationMenuLink>
-                </li>
-              </ul>
-            </NavigationMenuContent>
+            <NavigationMenuTrigger>Courses</NavigationMenuTrigger>
+            <NavigationMenuContent></NavigationMenuContent>
           </NavigationMenuItem>
+
           <NavigationMenuItem>
-            <NavigationMenuLink
-              className={navigationMenuTriggerStyle() + " text-xl "}
+            <NavLink
+              to="/about"
+              className={({ isActive, isPending }) =>
+                isActive
+                  ? "underline underline-offset-4 decoration-orange-500"
+                  : "no-underline"
+              }
             >
-              About Us
-            </NavigationMenuLink>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                About
+              </NavigationMenuLink>
+            </NavLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuLink
-              className={navigationMenuTriggerStyle() + " text-xl "}
+            <NavLink
+              to="/contact"
+              className={({ isActive, isPending }) =>
+                isActive
+                  ? "underline underline-offset-4 decoration-orange-500"
+                  : ""
+              }
             >
-              Contact
-            </NavigationMenuLink>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                Contact
+              </NavigationMenuLink>
+            </NavLink>
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>

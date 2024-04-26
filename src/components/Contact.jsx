@@ -15,7 +15,7 @@ function Contact() {
   });
 
   return (
-    <section className="     flex flex-col items-center md:items-stretch md:flex-row  min-h-[80%]  md:w-5/6 md:mx-auto md:my-4 my-2 ">
+    <section className="bg-white rounded-md flex flex-col items-center md:items-stretch md:flex-row  min-h-[80%]  md:w-11/12 md:mx-auto md:my-4 my-2 ">
       <div className="  flex  flex-col gap-4 md:gap-0 md:justify-evenly md:my-0 my-2  md:w-1/2 w-4/5 ">
         <div className="  flex flex-col  items-center w-full  ">
           <img

@@ -1,6 +1,6 @@
 function HeroSection() {
   return (
-    <div className="hero-section  h-full flex  md:justify-around items-center  relative overflow-hidden">
+    <section className="hero-section  h-full flex  md:justify-around items-center  relative overflow-hidden">
       <div className=" md:w-[40%] h-[70%]  md:h-[60%] text-white flex flex-col md:gap-10  items-center md:justify-around justify-evenly z-10">
         <div className="px-4  h-1/2 flex flex-col justify-around gap-2 md:h-auto">
           <h1 className="md:text-5xl text-6xl font-bold md:my-2  ">
@@ -27,7 +27,7 @@ function HeroSection() {
       <div className="absolute hero-image top-0  ">
         {/* <img src="/math-doodle.png" alt="" /> */}
       </div>
-    </div>
+    </section>
   );
 }
 

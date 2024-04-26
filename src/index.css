@@ -1,18 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  background: linear-gradient(-45deg, #f89b29c8 0%, #ff0f7bef 100%);
+  background-attachment: fixed;
+}
 .hero-section {
   /* background-color: #5356ffcc; */
   /* background-color: #41c9e2; */
   background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
 }
+
 .hero-image {
   background-image: url("/math-doodle.png");
   background-size: cover;
   background-repeat: no-repeat;
-  opacity: 0.6;
   filter: blur(10px);
+  opacity: 0.6;
   width: 100%;
   height: 100%;
 }
