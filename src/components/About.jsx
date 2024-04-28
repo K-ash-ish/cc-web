@@ -2,7 +2,7 @@ import React from "react";
 
 function About() {
   return (
-    <section className="bg-white card rounded-2xl min-h-full  md:w-4/6 w-4/5 mx-auto my-4 flex flex-col  ">
+    <section className="bg-white card rounded-2xl min-h-full  md:w-4/6 w-11/12 mx-auto my-4 flex flex-col  ">
       <div className="  flex flex-col  items-center w-full  ">
         <img
           src="unnamed.webp"

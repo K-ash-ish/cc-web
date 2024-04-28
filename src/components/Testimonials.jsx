@@ -44,8 +44,8 @@ function Testimonials() {
     },
   ];
   return (
-    <section className="bg-[#41C9E2] testimonials  md:h-full capitalize flex flex-col items-center gap-6 py-2 ">
-      <div className=" bg-rose-500 shadow-rose-500 shadow-md text-white md:px-4 px-3 py-2 md:py-2 rounded-md md:text-2xl font-medium">
+    <section className="bg-[#41C9E2] testimonials  h-screen capitalize flex flex-col items-center gap-6 py-2 ">
+      <div className=" border-2  py-2 px-4 rounded-md shadow-sm shadow-gray-100 my-4 text-2xl font-medium">
         Testimonials
       </div>
       <h2 className=" md:text-5xl text-3xl text-white font-semibold text-center">

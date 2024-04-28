@@ -15,8 +15,8 @@ function Contact() {
   });
 
   return (
-    <section className="bg-white rounded-md flex flex-col items-center md:items-stretch md:flex-row  min-h-[80%]  md:w-11/12 md:mx-auto md:my-4 my-2 ">
-      <div className="  flex  flex-col gap-4 md:gap-0 md:justify-evenly md:my-0 my-2  md:w-1/2 w-4/5 ">
+    <section className="bg-white rounded-md flex flex-col items-center  md:flex-row gap-2 md:px-4  md:min-h-[600px] md:w-5/6  w-full  mx-auto my-4  ">
+      <div className="  flex  flex-col gap-4 md:gap-0 md:justify-evenly md:my-0 my-2  md:w-1/2 w-full   md:h-[400px]">
         <div className="  flex flex-col  items-center w-full  ">
           <img
             src="unnamed.webp"
@@ -44,8 +44,8 @@ function Contact() {
           </p>
         </div>
       </div>
-      <div className="md:w-1/2 w-4/5 shadow-lg shadow-orange-100 rounded-2xl py-4 md:py-0 md:shadow-none justify-around md:flex md:flex-col">
-        <div className="w-1/2 mx-auto ">
+      <div className="md:w-1/2 w-11/12 border-2 md:border-none my-4 md:my-0 rounded-2xl py-4 md:py-0 justify-around md:flex md:flex-col">
+        <div className="md:w-1/2 w-11/12 mx-auto ">
           <Form {...form}>
             <form className="space-y-4 my-4">
               <FormFieldComp form={form} fieldName="Name" required={true} />
