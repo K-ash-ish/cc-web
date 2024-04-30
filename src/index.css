@@ -49,3 +49,21 @@ body {
 .testimonials {
   background: linear-gradient(-45deg, #f89b29 0%, rgb(255, 15, 123, 0.8) 100%);
 }
+.text-animate {
+  animation: slideFromTop 1s linear;
+}
+@keyframes slideFromTop {
+  0% {
+    transform: translatey(-30px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-20px);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

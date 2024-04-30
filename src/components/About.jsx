@@ -21,7 +21,7 @@ function About() {
         </h1> */}
         <div className="">
           <h3 className="md:text-2xl text-xl font-semibold ">Our Mission:</h3>
-          <p className="px-4 font-thin leading-loose md:text-xl md:my-2">
+          <p className="md:px-4 font-thin leading-loose md:text-xl md:my-2">
             To provide students with high-quality coaching, personalized
             attention, and a supportive learning environment that fosters
             excellence in academics and critical thinking.
@@ -29,7 +29,7 @@ function About() {
         </div>
         <div className="">
           <h3 className="md:text-2xl text-xl font-semibold ">Our Vision:</h3>
-          <p className="px-4 font-thin leading-loose md:text-xl md:my-2">
+          <p className="px-2 md:px-4 font-thin leading-loose md:text-xl md:my-2">
             To be a beacon of academic success, shaping future generations of
             well-rounded individuals equipped to thrive in a competitive world.
           </p>
@@ -38,7 +38,7 @@ function About() {
           <h3 className="md:text-2xl text-xl font-semibold ">
             Meet Our faculty
           </h3>
-          <div className="px-4 font-thin leading-loose md:text-xl md:my-2">
+          <div className="px-2 md:px-4 font-thin leading-loose md:text-xl md:my-2">
             <div className="   flex flex-col   float-right  ">
               <img
                 src=""

@@ -10,24 +10,45 @@ import {
 } from "../ui/navigation-menu";
 
 function Navbar() {
+  const navItems = [
+    {
+      title: "Home",
+      to: "/",
+    },
+    {
+      title: "about",
+      to: "/about",
+    },
+    {
+      title: "contact",
+      to: "/contact",
+    },
+  ];
   return (
     <div className=" w-full shadow-sm shadow-gray-300 rounded-b-xl   mx-auto flex md:justify-end justify-center items-center py-4  bg-white   px-4 min-h-20 ">
       <NavigationMenu>
         <NavigationMenuList>
-          <NavigationMenuItem>
-            <NavLink
-              to="/"
-              className={({ isActive, isPending }) =>
-                isActive
-                  ? "underline  underline-offset-4 decoration-orange-500"
-                  : ""
-              }
-            >
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Home
-              </NavigationMenuLink>
-            </NavLink>
-          </NavigationMenuItem>
+          {navItems?.map((item, index) => {
+            return (
+              <NavigationMenuItem key={index}>
+                <NavLink
+                  to={item?.to}
+                  className={({ isActive, isTransitioning }) =>
+                    [
+                      isActive
+                        ? "underline  underline-offset-4 decoration-orange-500"
+                        : "",
+                      isTransitioning ? " " : "",
+                    ].join(
+                      " group inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 md:text-xl  font-medium transition-colors hover:bg-slate-100 text-black hover:text-black focus:bg-slate-100 focus:text-slate-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-slate-100/50 data-[state=open]:bg-slate-100/50 dark:bg-slate-950 dark:hover:bg-slate-800 dark:hover:text-slate-50 dark:focus:bg-slate-800 dark:focus:text-slate-50 dark:data-[active]:bg-slate-800/50 dark:data-[state=open]:bg-slate-800/50"
+                    )
+                  }
+                >
+                  {item?.title}
+                </NavLink>
+              </NavigationMenuItem>
+            );
+          })}
           <NavigationMenuItem>
             <NavigationMenuTrigger>Courses</NavigationMenuTrigger>
             <NavigationMenuContent>
@@ -52,35 +73,6 @@ function Navbar() {
                 </Link>
               </ul>
             </NavigationMenuContent>
-          </NavigationMenuItem>
-
-          <NavigationMenuItem>
-            <NavLink
-              to="/about"
-              className={({ isActive, isPending }) =>
-                isActive
-                  ? "underline underline-offset-4 decoration-orange-500"
-                  : "no-underline"
-              }
-            >
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                About
-              </NavigationMenuLink>
-            </NavLink>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavLink
-              to="/contact"
-              className={({ isActive, isPending }) =>
-                isActive
-                  ? "underline underline-offset-4 decoration-orange-500"
-                  : ""
-              }
-            >
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Contact
-              </NavigationMenuLink>
-            </NavLink>
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
