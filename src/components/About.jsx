@@ -56,6 +56,8 @@ function About() {
             repudiandae suscipit dolor quaerat! Architecto alias temporibus
             dolores dolorem aperiam harum iure amet quia eum aspernatur quod id,
             cumque ipsa aut. lore
+            1.hello
+            2.hello
           </div>
         </div>
       </div>

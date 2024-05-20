@@ -1,7 +1,9 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { useLoaderData } from "react-router-dom";
 
 function Testimonials() {
+  const studentReviews = useLoaderData();
   const responsive = {
     desktop: {
       breakpoint: { max: 1600, min: 800 },
@@ -17,32 +19,6 @@ function Testimonials() {
     },
   };
 
-  const studentReviews = [
-    {
-      name: "Some Name",
-      percentage: "90%",
-      message:
-        "llorem ipsumlorem ipsumlorem ipsumlorem ipsumldsfasdfa asdfa sdfa sdfa sdforem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumorem ipsum",
-    },
-    {
-      name: "Some Name",
-      percentage: "90%",
-      message:
-        "llorem ipsumlorem ipsumlorem ipsumlorem ipsumldsfasdfa asdfa sdfa sdfa sdforem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumorem ipsum",
-    },
-    {
-      name: "Some Name",
-      percentage: "90%",
-      message:
-        "llorem ipsumloremm ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumorem im ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumorem im ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumorem im ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumorem im ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumorem im ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumorem im ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumorem im ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumorem i ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumorem ipsum",
-    },
-    {
-      name: "Some Name",
-      percentage: "90%",
-      message:
-        "llorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumorem ipsum",
-    },
-  ];
   return (
     <section className="bg-[#41C9E2] testimonials  h-screen capitalize flex flex-col items-center gap-6 py-2 ">
       <div className=" border-2  py-2 px-4 rounded-md shadow-sm shadow-gray-100 my-4 text-2xl font-medium">
@@ -76,15 +52,20 @@ function Testimonials() {
               className="flex flex-col justify-center  gap-10 h-full"
             >
               <p className="font-thin ">
-                "
-                {review?.message.length < 350
-                  ? review?.message
-                  : review?.message?.slice(0, 350) + "..."}
-                "
+                {`"${
+                  review?.student_review.length < 350
+                    ? review?.student_review
+                    : review?.student_review?.slice(0, 350) + "..."
+                }"`}
               </p>
               <p className="italic my-1  text-[#F89035] ">
-                {review?.name}{" "}
-                <span className="font-bold">{review.percentage}</span>
+                {review?.student_name}{" "}
+                <span className="font-bold">
+                  {review.student_percentage}%,{" "}
+                </span>
+                <span className="italic font-thin text-sm">
+                  Class {review.student_class}
+                </span>
               </p>
             </div>
           );
