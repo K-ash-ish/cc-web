@@ -4,6 +4,9 @@ import { useForm } from "react-hook-form";
 import { Button } from "./ui/button";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useState } from "react";
+import { Toaster } from "./ui/toaster";
+import { useToast } from "./ui/use-toast";
 const formSchema = z.object({
   name: z.string({
     required_error: "FullName is required.",
@@ -24,6 +27,9 @@ const formSchema = z.object({
   }),
 });
 function Contact() {
+  const [formSuccess, setFormSuccess] = useState(false);
+
+  const { toast } = useToast();
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -48,8 +54,6 @@ function Contact() {
         },
       },
     ];
-    console.log(JSON.stringify({ mutations }));
-    console.log(import.meta.env.REACT_AUTHORIZATION_TOKEN);
     fetch(`https://5wzoxlfe.api.sanity.io/v2024-05-20/data/mutate/production`, {
       method: "POST",
       headers: {
@@ -59,7 +63,14 @@ function Contact() {
       body: JSON.stringify({ mutations }),
     })
       .then((response) => response.json())
-      .then((result) => console.log(result))
+      .then((result) => {
+        if (result) {
+          toast({
+            description: "Form submitted successfully🎉",
+          });
+          form.reset();
+        }
+      })
       .catch((error) => console.error(error));
   }
 
@@ -140,6 +151,7 @@ function Contact() {
           </Form>
         </div>
       </div>
+      <Toaster />
     </section>
   );
 }
