@@ -12,6 +12,11 @@ const MATERIAL_TYPE = [
   {title: 'Video', value: 'video'},
   {title: 'Other', value: 'other'},
 ]
+const COURSE_STATUS = [
+  {title: 'Inactive', value: 'inactive'},
+  {title: 'Upcoming', value: 'upcoming'},
+  {title: 'Ongoing', value: 'ongoing'},
+]
 export const courses = defineType({
   name: 'course_detail',
   title: 'Course Details',
@@ -28,37 +33,49 @@ export const courses = defineType({
 
     defineField({
       name: 'special_course',
-      title: 'Special Course',
-      type: 'object',
+      title: 'Special Courses',
+      type: 'array',
       hidden: ({parent}) => parent?.course_type !== 'Special',
-      fields: [
+      of: [
         {
-          name: 'course_name',
-          title: 'Course Name',
-          type: 'string',
+          type: 'object',
+          fields: [
+            {
+              name: 'course_name',
+              title: 'Course Name',
+              type: 'string',
+            },
+            {
+              name: 'course_image',
+              title: 'Course Image',
+              type: 'image',
+            },
+
+            {
+              name: 'course_price',
+              title: 'Course Price',
+              type: 'number',
+            },
+            {
+              name: 'course_duration',
+              title: 'Course Duration',
+              type: 'number',
+              description: 'In months',
+            },
+            {name: 'course_start_date', title: 'Course Start Date', type: 'date'},
+            {
+              name: 'course_status',
+              title: 'Course Status',
+              type: 'string',
+              options: {list: COURSE_STATUS.map(({title, value}) => ({title, value}))},
+            },
+            {
+              name: 'course_description',
+              title: 'Course Description',
+              type: 'text',
+            },
+          ],
         },
-        {
-          name: 'course_image',
-          title: 'Course Image',
-          type: 'image',
-        },
-        {
-          name: 'course_description',
-          title: 'Course Description',
-          type: 'text',
-        },
-        {
-          name: 'course_price',
-          title: 'Course Price',
-          type: 'number',
-        },
-        {
-          name: 'course_duration',
-          title: 'Course Duration',
-          type: 'number',
-          description: 'In months',
-        },
-        {name: 'course_start_date', title: 'Course Start Date', type: 'date'},
       ],
     }),
 

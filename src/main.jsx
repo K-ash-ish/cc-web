@@ -7,6 +7,7 @@ import About from "./components/About.jsx";
 import Contact from "./components/Contact.jsx";
 import Home from "./components/Home";
 import { sanityClient } from "./client";
+import Courses from "./components/Courses";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
+      },
+      {
+        path: "/courses/:courseName",
+        element: <Courses />,
       },
     ],
   },
