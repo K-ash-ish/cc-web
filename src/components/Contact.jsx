@@ -4,7 +4,6 @@ import { useForm } from "react-hook-form";
 import { Button } from "./ui/button";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useState } from "react";
 import { Toaster } from "./ui/toaster";
 import { useToast } from "./ui/use-toast";
 const formSchema = z.object({
@@ -27,8 +26,6 @@ const formSchema = z.object({
   }),
 });
 function Contact() {
-  const [formSuccess, setFormSuccess] = useState(false);
-
   const { toast } = useToast();
   const form = useForm({
     resolver: zodResolver(formSchema),

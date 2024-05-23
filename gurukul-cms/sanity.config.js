@@ -28,6 +28,7 @@ export default defineConfig({
               .child(S.document().schemaType('contact').documentId('contact')),
             S.documentTypeListItem('testimonials').title('Testimonials'),
             S.documentTypeListItem('student_form_data').title('Student Form Data'),
+            S.documentTypeListItem('course_detail').title('Course Detail'),
           ]),
       // .items([S.documentTypeListItem('contact').title('Contact Info')]),
     }),
