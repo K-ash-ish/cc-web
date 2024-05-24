@@ -34,7 +34,15 @@ export const contact = defineType({
       name: 'social_link',
       title: 'Social Link',
       type: 'array',
-      of: [{type: 'url'}],
+      of: [
+        {
+          type: 'object',
+          fields: [
+            {type: 'url', name: 'url', title: 'URL'},
+            {name: 'title', title: 'Title', type: 'string'},
+          ],
+        },
+      ],
     }),
   ],
 })

@@ -1,31 +1,11 @@
-import { Mail, MapPin, PhoneCallIcon } from "lucide-react";
+import { ArrowUpRight, Mail, MapPin, PhoneCallIcon } from "lucide-react";
 import { useLoaderData } from "react-router-dom";
 
 function Footer() {
   const contactDetails = useLoaderData(); //data from database
-  const socialMedia = [
-    {
-      link: "somelink",
-      at: "youtube",
-    },
-    {
-      link: "somelink",
-      at: "facebook",
-    },
-    {
-      link: "somelink",
-      at: "linkedin",
-    },
-  ];
-  // const contactDetails = [
-  //   {
-  //     mobile_number: "123456789",
-  //     email: "someemail@email.com",
-  //     address: "Some line Lorem ipsum dolor sit amet consectetur ",
-  //   },
-  // ];
+
   return (
-    <footer className="bg-white md:min-h-[320px] flex md:flex-row flex-col md:gap-0 gap-3 md:justify-evenly md:items-center md:border-none border-2 border-dashed border-orange-200 rounded-2xl py-4 px-2 md:px-0 md:py-2 md:px-2 md:my-0 my-4 mx-2    ">
+    <footer className="bg-white md:min-h-[220px] flex md:flex-row flex-col md:gap-0 gap-3 md:justify-evenly md:items-start md:border-none border-2 border-dashed border-orange-200 rounded-2xl py-4 px-2 md:px-0 md:py-2 md:my-0 my-4 mx-2    ">
       <div className=" flex justify-around items-center md:flex-col md:justify-normal md:items-start  gap-3 capitalize ">
         <div className="  md:flex md:justify-start  ">
           <img
@@ -82,10 +62,16 @@ function Footer() {
           Follow us
         </h3>
         <ul className="flex justify-around  w-full  flex-wrap md:flex-col md:gap-2 ">
-          {socialMedia?.map((social, i) => {
+          {contactDetails[0]?.social_link?.map((social, i) => {
             return (
-              <a href={social?.link} key={i} className="">
-                {social.at}
+              <a
+                target="_blank"
+                href={social.url}
+                key={i}
+                className="font-semibold flex items-center justify-center gap-1 underline decoration-orange-200 underline-offset-2 "
+              >
+                {social.title}
+                <ArrowUpRight size={10} className="text-blue-400 " />
               </a>
             );
           })}

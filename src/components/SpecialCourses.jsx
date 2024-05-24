@@ -16,9 +16,9 @@ function SpecialCourses({ course_type, special_course }) {
         Special Courses:
       </h1>
       <div className="my-4 flex flex-col items-center gap-8 px-2 md:flex-row md:justify-around flex-wrap">
-        {special_course?.map((course) => (
+        {special_course?.map((course, i) => (
           <div
-            key={course._id}
+            key={i}
             className=" bg-white rounded-md card flex flex-col items-center px-2 gap-3 md:w-[380px]"
           >
             <img

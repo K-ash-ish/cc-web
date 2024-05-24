@@ -54,22 +54,28 @@ function Navbar() {
             <NavigationMenuContent>
               <ul className=" capitalize grid  gap-3 p-4 bg-white w-[350px] md:w-[250px]  ">
                 <Link
-                  to="/"
+                  to="/courses/mp"
                   className=" hover:bg-gray-100 transition-all duration-500 bg-gray-200 p-2 rounded-md"
                 >
                   Mp Board
                 </Link>
                 <Link
-                  to="/"
+                  to="/courses/cbse"
                   className=" hover:bg-gray-100 transition-all duration-500 bg-gray-200 p-2 rounded-md"
                 >
                   cbse Board
                 </Link>
                 <Link
-                  to="/"
+                  to="/courses/icse"
                   className=" hover:bg-gray-100 transition-all duration-500 bg-gray-200 p-2 rounded-md"
                 >
                   Icse Board
+                </Link>
+                <Link
+                  to="/courses/special"
+                  className=" hover:bg-gray-100 transition-all duration-500 bg-gray-200 p-2 rounded-md"
+                >
+                  Special Courses
                 </Link>
               </ul>
             </NavigationMenuContent>

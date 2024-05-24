@@ -35,6 +35,22 @@ const router = createBrowserRouter([
       },
       {
         path: "/courses/:courseName",
+        loader: async ({ params }) => {
+          const { courseName } = params;
+          if (courseName === "mp") {
+            return sanityClient
+              .fetch(`*[_type == "course_detail" && course_type == "MP"]`)
+              .then((data) => data);
+          } else if (courseName === "cbse") {
+            return sanityClient
+              .fetch(`*[_type == "course_detail" && course_type == "CBSE"]`)
+              .then((data) => data);
+          } else if (courseName === "special") {
+            return sanityClient
+              .fetch(`*[_type == "course_detail" && course_type == "Special"]`)
+              .then((data) => data);
+          } else return null;
+        },
         element: <Courses />,
       },
     ],
