@@ -20,9 +20,6 @@ function About() {
         </p>
       </div>
       <div className=" mx-4  md:w-4/5 md:mx-auto my-4  h-full flex flex-col justify-evenly gap-3">
-        {/* <h1 className="text-3xl font-semibold text-[#f89035] text-center my-2  ">
-          About us
-        </h1> */}
         <div className="">
           <h3 className="md:text-2xl text-xl font-semibold ">Our Mission:</h3>
           <p className="md:px-4 font-thin leading-loose md:text-xl md:my-2">
