@@ -61,12 +61,18 @@ function Contact() {
     })
       .then((response) => response.json())
       .then((result) => {
-        if (result) {
+        form.reset();
+        if (result?.error) {
           toast({
-            description: "Form submitted successfully🎉",
+            variant: "destructive",
+            title: "Uh oh! Something went wrong.",
+            description: "There was a problem with your request.",
           });
-          form.reset();
+          return;
         }
+        toast({
+          description: "Form submitted successfully🎉",
+        });
       })
       .catch((error) => console.error(error));
   }
