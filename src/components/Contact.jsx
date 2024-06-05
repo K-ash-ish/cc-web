@@ -76,7 +76,7 @@ function Contact() {
       <div className="  flex  flex-col gap-4 md:gap-0 md:justify-evenly md:my-0 my-2  md:w-1/2 w-full   md:h-[400px]">
         <div className="  flex flex-col  items-center w-full  ">
           <img
-            src="unnamed.webp"
+            src="/unnamed.webp"
             alt="logo"
             className="max-w-full max-h-full align-middle  object-contain "
             width={80}

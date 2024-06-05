@@ -9,7 +9,7 @@ function Footer() {
       <div className=" flex justify-around items-center md:flex-col md:justify-normal md:items-start  gap-3 capitalize ">
         <div className="  md:flex md:justify-start  ">
           <img
-            src="unnamed.webp"
+            src="/unnamed.webp"
             alt="logo"
             className="max-w-full max-h-full align-middle  object-contain "
             width={80}

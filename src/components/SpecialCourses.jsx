@@ -1,8 +1,7 @@
 import { urlFor } from "@/client";
-import React from "react";
 import { Button } from "./ui/button";
 
-function SpecialCourses({ course_type, special_course }) {
+function SpecialCourses({ special_course }) {
   if (special_course.length === 0) {
     return (
       <div className="flex justify-center items-center bg-white rounded-md  md:px-3 p-2  md:min-h-[600px] min-h-[500px] md:w-5/6 w-11/12 mx-auto my-4 ">
@@ -19,22 +18,24 @@ function SpecialCourses({ course_type, special_course }) {
         {special_course?.map((course, i) => (
           <div
             key={i}
-            className=" bg-white rounded-md card flex flex-col items-center px-2 gap-3 md:w-[380px]"
+              className=" bg-white rounded-md card flex flex-col items-center  px-3 py-2 md:px-2 gap-3 md:w-[380px] w-4/5 md:h-[450px]"
           >
             <img
               src={urlFor(course?.course_image).url()}
-              className="w-[200px] h-[200px]"
-              alt=""
+              className="w-[200px] h-[120px] object-contain "
+              alt="course-image"
+              width={200}
+              height={200}
             />
-            <div className=" flex items-center justify-between w-full ">
-              <h3 className="text-xl  font-semibold text-fuchsia-500">
+            <div className=" flex items-center justify-between w-full my-1 ">
+              <h3 className="text-xl  font-semibold text-fuchsia-500 capitalize">
                 {course.course_name}
               </h3>
               <span className="text-lg font-bold text-green-500">
                 {course.course_price}₹
               </span>
             </div>
-            <p className="text-center leading-relaxed text-black">
+            <p className="text-center leading-relaxed text-black min-h-36 w-full">
               {course.course_description}
             </p>
             <div className="w-full flex flex-row justify-between items-center">

@@ -1,3 +1,6 @@
+import { ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
+
 function HeroSection() {
   return (
     <section className="hero-section h-screen    flex md:flex-row flex-col-reverse gap-2  justify-center  md:justify-around items-center  relative overflow-hidden">
@@ -6,10 +9,34 @@ function HeroSection() {
           <h1 className="md:text-5xl text-6xl font-bold md:my-2  ">
             Ace Your Exams with Us
           </h1>
-          <p className="font-thin text-xl md:text-base  w-5/6">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
-            maxime ab assumenda, culpa totam dolorum quasi odit velit nam.
+          <p className="font-semibold text-white italic text-xl md:text-xl  w-5/6 ">
+            Learn Understand Succeed.
           </p>
+          <ul className="flex flex-row gap-2 font-semibold">
+            <Link
+              to="/courses/hometution"
+              className="flex flex-row items-center underline underline-offset-1 text-white animate-pulse"
+            >
+              Home Tution
+              <ArrowUpRight size={14} className="text-fuchsia-300 " />
+            </Link>
+            |
+            <Link
+              to="/courses/boards"
+              className="flex flex-row items-center underline underline-offset-1 text-white animate-pulse"
+            >
+              Board
+              <ArrowUpRight size={14} className="text-fuchsia-300 " />
+            </Link>
+            |
+            <Link
+              to="/courses/special"
+              className="flex flex-row items-center underline underline-offset-1 text-white animate-pulse"
+            >
+              Special
+              <ArrowUpRight size={14} className="text-fuchsia-300 " />
+            </Link>
+          </ul>
         </div>
         <button className="call-btn px-6 py-3    rounded-lg  text-white  transition-all duration-700  bg-purple-700 focus:ring-4  focus:ring-pink-200  capitalize  font-medium   flex">
           Schedule a call
