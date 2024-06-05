@@ -88,8 +88,8 @@ function Contact() {
             width={80}
             height={80}
           />
-          <p className="font-thin  text-center ">
-            Some line Lorem ipsum dolor sit amet consectetur{" "}
+          <p className="font-thin  text-center italic">
+            Learn Understand Succeed{" "}
           </p>
         </div>
         <div className="md:flex md:flex-col gap-4">

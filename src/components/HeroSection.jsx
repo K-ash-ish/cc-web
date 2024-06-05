@@ -38,9 +38,13 @@ function HeroSection() {
             </Link>
           </ul>
         </div>
-        <button className="call-btn px-6 py-3    rounded-lg  text-white  transition-all duration-700  bg-purple-700 focus:ring-4  focus:ring-pink-200  capitalize  font-medium   flex">
+        <Link
+          to="/"
+          className="call-btn px-6 py-3   text-2xl rounded-lg  text-white  transition-all duration-700  bg-purple-700 focus:ring-4  focus:ring-pink-200  capitalize  font-medium   flex items-center gap-1"
+        >
           Schedule a call
-        </button>
+          <ArrowUpRight size={14} className="text-blue-500 " />
+        </Link>
       </div>
       <div className=" hero-logo z-10 flex bg-white md:min-w-[400px] w-[200px] h-[200px]  md:min-h-[400px] items-center justify-center rounded-full  ">
         <img

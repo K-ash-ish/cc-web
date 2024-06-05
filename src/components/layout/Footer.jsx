@@ -20,9 +20,7 @@ function Footer() {
           <h3 className="uppercase text-xl font-bold text-[#f89035] ">
             gurukul Classes
           </h3>
-          <p className="font-thin  md:w-4/6">
-            Some line Lorem ipsum dolor sit amet consectetur{" "}
-          </p>
+          <p className="font-thin italic">Learn Understand Succeed</p>
         </div>
       </div>
 

@@ -44,9 +44,9 @@ function About() {
             return (
               <div
                 key={faculty._key}
-                className="px-2 md:px-4 py-2 font-thin leading-loose md:text-xl my-4 rounded-md shadow-md"
+                className="px-4 py-2 font-thin leading-loose md:text-xl my-4 rounded-md shadow-md min-h-[250px]"
               >
-                <h1 className="text-xl font-semibold text-[#f89035] underline underline-offset-2">
+                <h1 className="text-2xl my-2 font-semibold text-[#f89035] underline underline-offset-2">
                   {faculty?.name}
                 </h1>
                 <div className="   flex flex-col   float-right  ">
