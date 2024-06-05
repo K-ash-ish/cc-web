@@ -1,5 +1,4 @@
 import { urlFor } from "@/client";
-import React from "react";
 import { useLoaderData } from "react-router-dom";
 
 function About() {
@@ -44,21 +43,23 @@ function About() {
             return (
               <div
                 key={faculty._key}
-                className="px-4 py-2 font-thin leading-loose md:text-xl my-4 rounded-md shadow-md min-h-[250px]"
+                className="p-4  leading-loose md:text-xl my-4 rounded-md bg-gray-800 text-white font-thin  min-h-[250px]"
               >
                 <h1 className="text-2xl my-2 font-semibold text-[#f89035] underline underline-offset-2">
                   {faculty?.name}
                 </h1>
                 <div className="   flex flex-col   float-right  ">
-                  <img
-                    src={urlFor(faculty.image).url()}
-                    alt="your-image"
-                    className="max-w-full w-[100px] h-[100px] md:w-[150px] md:h-[150px] max-h-full align-middle  object-contain rounded-full shadow-md shadow-orange-200 mx-2 "
-                    width={150}
-                    height={150}
-                  />
+                  {urlFor(faculty.image).url() && (
+                    <img
+                      src={urlFor(faculty.image).url()}
+                      alt="your-image"
+                      className="max-w-full w-[100px] h-[100px] md:w-[150px] md:h-[150px] max-h-full align-middle  object-contain rounded-full shadow-sm shadow-gray-200 mx-2 "
+                      width={150}
+                      height={150}
+                    />
+                  )}{" "}
                   <div className="flex flex-col items-center text-xs text-center font-semibold text-[#f89035] my-2 ">
-                    <span className="text-black underline underline-offset-1">
+                    <span className="underline underline-offset-1">
                       {faculty?.contact_number}
                     </span>
                   </div>

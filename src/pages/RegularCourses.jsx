@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 function filterMaterialByClass(material, studentClass) {
   return material.filter((data) => data.class === studentClass);
@@ -19,20 +18,24 @@ function FilteredMaterial({ data }) {
     <>
       {Object.entries(filteredMaterial).map((material, i) => {
         return (
-          <div key={i} className="mx-2 bg-gray-100 rounded-sm px-2 py-1">
+          <div
+            key={i}
+            className="m-2 bg-gray-800 text-white rounded-md px-4 py-2"
+          >
             <h2 className="text-base font-semibold capitalize">
               {material[0].replace("_", " ")}
             </h2>
-            {material[1].map((materialData, i) => (
-              <Link
-                key={i}
-                to={materialData.link}
-                className="text-blue-400 flex items-center gap-1 m-2 bg-white p-1 rounded-md hover:bg-gray-100  cursor-pointer"
-              >
-                <span>{materialData.title}</span>
-                <ArrowUpRight className="text-blue-400" size={10} />
-              </Link>
-            ))}
+            <div className="flex flex-col">
+              {material[1].map((materialData, i) => (
+                <Link
+                  key={i}
+                  to={materialData.link}
+                  className="text-white  m-2 bg-cyan-900 px-2 py-1 rounded-md hover:bg-gray-100 hover:text-black  cursor-pointer duration-300"
+                >
+                  {materialData.title}
+                </Link>
+              ))}
+            </div>
           </div>
         );
       })}
@@ -64,7 +67,9 @@ function CourseMaterial({ material }) {
         {Object.entries(classWiseData).map((data, i) => {
           return (
             <div key={i}>
-              <h1 className="uppercase font-semibold text-xl">{data[0]}</h1>
+              <h1 className="capitalize my-2 font-semibold text-xl ">
+                {data[0]}:
+              </h1>
               <FilteredMaterial data={data[1]} />
             </div>
           );

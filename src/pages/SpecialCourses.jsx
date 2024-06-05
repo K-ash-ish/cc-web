@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { urlFor } from "@/client";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 function SpecialCourses({ special_course }) {
   if (special_course.length === 0) {
@@ -46,7 +47,13 @@ function SpecialCourses({ special_course }) {
               </span>{" "}
             </div>
 
-            <Button className="bg-green-500 my-2">Enroll Now</Button>
+            <Link
+              to="https://forms.gle/FogDUoUc1PX7msjp9"
+              target="_blank"
+              className="bg-green-500 my-2 px-4 py-2 rounded-md"
+            >
+              Enroll Now
+            </Link>
           </div>
         ))}
       </div>

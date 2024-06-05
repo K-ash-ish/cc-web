@@ -18,16 +18,16 @@ function Classroom() {
 
     {
       icon: <User className="text-amber-500" size={30} />,
-      title: "Limited Batch Size",
+      title: "Personalized Learning",
     },
 
     {
       icon: <Users className="text-amber-500" size={30} />,
-      title: "Limited Batch Size",
+      title: "Individual Attention",
     },
     {
       icon: <LocateFixed className="text-amber-500" size={30} />,
-      title: "Limited Batch Size",
+      title: "Supportive Mentorship",
     },
   ];
   return (
@@ -37,15 +37,15 @@ function Classroom() {
       </h1>
       <div className=" flex md:flex-row  md:justify-between md:items-center flex-col items-center mb-2 capitalize text-xl">
         <p className="my-2 md:w-1/2 font-thin italic">
-          {" "}
           about your service here
         </p>
-        <div className="flex flex-row items-center gap-1">
-          At locations:{"  "}
-          <div className="font-semibold flex flex-row items-center gap-2">
+        <div className="flex flex-col text-sm md:flex-row md:items-center gap-1  border border-black p-2 rounded md:border-none">
+          At locations:
+          <div className="font-semibold  flex flex-row items-center gap-2">
             <span>Indore | Bhopal | Jabalpur</span>
             <Link
-              to=""
+              to="https://forms.gle/FogDUoUc1PX7msjp9"
+              target="_blank"
               className=" font-thin my-2 text-center underline flex items-center justify-center text-blue-500"
             >
               Contact <ArrowUpRight size={10} />
@@ -64,10 +64,10 @@ function Classroom() {
         elements={classroom}
       />
 
-      <h1 className="text-2xl   capitalize font-medium p-2 my-2  rounded-md">
+      <h1 className="text-2xl md:border-none border border-black   capitalize font-medium p-2 md:my-2  rounded-md">
         Material based on boards:
       </h1>
-      <div className="flex md:flex-row md:justify-around md:items-center md:flex-auto flex-col justify-around flex-1 rounded-md my-4 ">
+      <div className="flex  md:flex-row md:justify-around md:items-center md:flex-auto flex-col gap-4 flex-1 rounded-md my-2 md:my-4 ">
         {boards?.map((board, i) => (
           <Link
             key={i}

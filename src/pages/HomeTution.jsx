@@ -11,21 +11,21 @@ function HomeTution() {
   const homeTution = [
     {
       icon: <ClipboardCheck className="text-amber-500" size={30} />,
-      title: "Limited Batch Size",
+      title: "Tailored Instruction",
     },
 
     {
       icon: <User className="text-amber-500" size={30} />,
-      title: "Limited Batch Size",
+      title: "One-on-One Guidance",
     },
 
     {
       icon: <Users className="text-amber-500" size={30} />,
-      title: "Limited Batch Size",
+      title: "Tailored Feedback",
     },
     {
       icon: <LocateFixed className="text-amber-500" size={30} />,
-      title: "Limited Batch Size",
+      title: "Supportive Mentorship",
     },
   ];
   return (
@@ -38,12 +38,13 @@ function HomeTution() {
           {" "}
           about your service here
         </p>
-        <div className="flex flex-row items-center flex-wrap gap-1">
+        <div className="text-sm flex flex-row items-center flex-wrap gap-1   border border-black p-2 rounded md:border-none ">
           At locations:{"  "}
           <div className="font-semibold flex flex-row items-center gap-2">
             <span>Indore | Bhopal | Jabalpur</span>
             <Link
-              to=""
+              to="https://forms.gle/FogDUoUc1PX7msjp9"
+              target="_blank"
               className=" font-thin my-2 text-center underline flex items-center justify-center text-blue-500"
             >
               Contact <ArrowUpRight size={10} />

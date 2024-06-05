@@ -39,7 +39,8 @@ function HeroSection() {
           </ul>
         </div>
         <Link
-          to="/"
+          to="https://forms.gle/TswevrLQ8ZYX1C6r8"
+          target="_blank"
           className="call-btn px-6 py-3   text-2xl rounded-lg  text-white  transition-all duration-700  bg-purple-700 focus:ring-4  focus:ring-pink-200  capitalize  font-medium   flex items-center gap-1"
         >
           Schedule a call

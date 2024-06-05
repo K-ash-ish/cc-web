@@ -9,7 +9,8 @@ function ProgramBanner({ title, description, elements }) {
             key={i}
             className="flex flex-col justify-center items-start border p-3 rounded-xl w-[240px] h-[120px] gap-4 bg-slate-900 text-white my-4"
           >
-            {item?.icon} <h2 className="text-xl font-semibold">{item.title}</h2>
+            {item?.icon}{" "}
+            <h2 className="text-xl font-semibold capitalize">{item.title}</h2>
           </div>
         ))}
       </div>
