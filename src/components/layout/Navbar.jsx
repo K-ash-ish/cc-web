@@ -70,6 +70,18 @@ function Navbar() {
                   Icse Board
                 </Link>
                 <Link
+                  to="/courses/classroom"
+                  className=" hover:bg-gray-100 transition-all duration-500 bg-gray-200 p-2 rounded-md"
+                >
+                  Classroom Program
+                </Link>
+                <Link
+                  to="/courses/hometution"
+                  className=" hover:bg-gray-100 transition-all duration-500 bg-gray-200 p-2 rounded-md"
+                >
+                  Home Tution
+                </Link>
+                <Link
                   to="/courses/special"
                   className=" hover:bg-gray-100 transition-all duration-500 bg-gray-200 p-2 rounded-md"
                 >

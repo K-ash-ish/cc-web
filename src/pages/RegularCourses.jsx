@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 function filterMaterialByClass(material, studentClass) {
@@ -39,7 +40,7 @@ function FilteredMaterial({ data }) {
   );
 }
 
-function RegularCourses({ material }) {
+function CourseMaterial({ material }) {
   const classWiseData = {};
   //   console.log(material);
   for (let i = 1; i <= 12; i++) {
@@ -57,7 +58,7 @@ function RegularCourses({ material }) {
   return (
     <div className="  bg-white rounded-md  md:px-4 p-2  md:min-h-[600px] min-h-[500px] md:w-5/6 w-11/12 mx-auto my-4 ">
       <h1 className="text-2xl  font-semibold p-2 bg-gray-100  rounded-md">
-        Regular Courses:
+        Course Material:
       </h1>
       <div className="my-4 flex flex-col   px-2 md:w-3/6 mx-auto  border-black">
         {Object.entries(classWiseData).map((data, i) => {
@@ -73,4 +74,4 @@ function RegularCourses({ material }) {
   );
 }
 
-export default RegularCourses;
+export default CourseMaterial;

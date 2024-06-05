@@ -64,8 +64,8 @@ function Classroom() {
         elements={classroom}
       />
 
-      <h1 className="text-2xl  font-semibold p-2 bg-gray-100 my-2  rounded-md">
-        Board Material:
+      <h1 className="text-2xl   capitalize font-medium p-2 my-2  rounded-md">
+        Material based on boards:
       </h1>
       <div className="flex md:flex-row md:justify-around md:items-center md:flex-auto flex-col justify-around flex-1 rounded-md my-4 ">
         {boards?.map((board, i) => (

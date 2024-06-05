@@ -1,6 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import SpecialCourses from "@/pages/SpecialCourses";
-import RegularCourses from "@/pages/RegularCourses";
+import CourseMaterial from "@/pages/RegularCourses";
 
 import Classroom from "@/pages/Classroom";
 import HomeTution from "@/pages/HomeTution";
@@ -26,7 +26,7 @@ function Courses() {
         special_course={special_course}
       />
     );
-  return <RegularCourses material={material} />;
+  return <CourseMaterial material={material} />;
 }
 
 export default Courses;
