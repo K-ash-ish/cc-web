@@ -1,5 +1,5 @@
 import { urlFor } from "@/client";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 
 function SpecialCourses({ special_course }) {
   if (special_course.length === 0) {
@@ -18,7 +18,7 @@ function SpecialCourses({ special_course }) {
         {special_course?.map((course, i) => (
           <div
             key={i}
-              className=" bg-white rounded-md card flex flex-col items-center  px-3 py-2 md:px-2 gap-3 md:w-[380px] w-4/5 md:h-[450px]"
+            className=" bg-white rounded-md card flex flex-col items-center  px-3 py-2 md:px-2 gap-3 md:w-[380px] w-4/5 md:h-[450px]"
           >
             <img
               src={urlFor(course?.course_image).url()}

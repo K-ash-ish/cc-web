@@ -22,10 +22,10 @@ function HeroSection() {
             </Link>
             |
             <Link
-              to="/courses/boards"
+              to="/courses/classroom"
               className="flex flex-row items-center underline underline-offset-1 text-white animate-pulse"
             >
-              Board
+              Classroom
               <ArrowUpRight size={14} className="text-fuchsia-300 " />
             </Link>
             |

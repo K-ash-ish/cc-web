@@ -1,9 +1,9 @@
-import { sanityClient, urlFor } from "@/client";
-import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
-import { Button } from "./ui/button";
-import SpecialCourses from "./SpecialCourses";
-import RegularCourses from "./RegularCourses";
+import SpecialCourses from "@/pages/SpecialCourses";
+import RegularCourses from "@/pages/RegularCourses";
+
+import Classroom from "@/pages/Classroom";
+import HomeTution from "@/pages/HomeTution";
 function Courses() {
   const data = useLoaderData();
   const { courseName } = useParams();
@@ -12,6 +12,13 @@ function Courses() {
     special_course = [],
     material = [],
   } = (data && data[0]) ?? {};
+
+  if (courseName === "hometution") {
+    return <HomeTution />;
+  }
+  if (courseName === "classroom") {
+    return <Classroom />;
+  }
   if (courseName === "special")
     return (
       <SpecialCourses
