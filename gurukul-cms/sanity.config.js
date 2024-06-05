@@ -6,7 +6,7 @@ import {schemaTypes} from './schemaTypes'
 const singletonActions = new Set(['publish', 'discardChanges', 'restore'])
 
 // Define the singleton document types
-const singletonTypes = new Set(['contact'])
+const singletonTypes = new Set(['contact,about'])
 
 export default defineConfig({
   name: 'default',
@@ -26,10 +26,15 @@ export default defineConfig({
               .title('Contact')
               .id('contact')
               .child(S.document().schemaType('contact').documentId('contact')),
+            S.listItem()
+              .title('About')
+              .id('about')
+              .child(S.document().schemaType('about').documentId('about')),
             S.documentTypeListItem('testimonials').title('Testimonials'),
             S.documentTypeListItem('student_form_data').title('Student Form Data'),
             S.documentTypeListItem('course_detail').title('Course Detail'),
           ]),
+
       // .items([S.documentTypeListItem('contact').title('Contact Info')]),
     }),
     visionTool(),

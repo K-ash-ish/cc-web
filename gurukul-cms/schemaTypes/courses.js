@@ -73,6 +73,7 @@ export const courses = defineType({
               name: 'course_description',
               title: 'Course Description',
               type: 'text',
+              validation: (rule) => rule.required().min(10).max(206),
             },
           ],
         },
