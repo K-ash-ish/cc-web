@@ -37,7 +37,7 @@ function Classroom() {
       </h1>
       <div className=" flex md:flex-row  md:justify-between md:items-center flex-col items-center mb-2 capitalize text-xl">
         <p className="my-2 md:w-1/2 font-thin italic">
-          about your service here
+          "Explore Our Classroom: Interactive Learning and Enrichment"
         </p>
         <div className="flex flex-col text-sm md:flex-row md:items-center gap-1  border border-black p-2 rounded md:border-none">
           At locations:

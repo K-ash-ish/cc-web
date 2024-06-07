@@ -35,8 +35,8 @@ function HomeTution() {
       </h1>
       <div className=" flex md:flex-row  md:justify-between md:items-center flex-col items-center mb-2 capitalize text-xl">
         <p className="my-2 md:w-1/2 font-thin italic">
-          {" "}
-          about your service here
+          "Personalized Home Tuition Services: Tailored Learning
+          at Your Doorstep"
         </p>
         <div className="text-sm flex flex-row items-center flex-wrap gap-1   border border-black p-2 rounded md:border-none ">
           At locations:{"  "}
@@ -55,11 +55,7 @@ function HomeTution() {
 
       <ProgramBanner
         title={"Benefits of Classroom Program"}
-        description={`Classroom programs are the most popular methods of learning opted by
-        students who believe in perfection and who look forward to close, power
-        packed interactions to attain complete learning in one go. This is
-        extremely successful and result oriented because of strong Peer group,
-        personal attention and round the clock availability of mentors.`}
+        description={`Experience personalized learning and flexible scheduling with home tuition, ensuring your child's academic success and confidence. Unlock their potential with tailored instruction in the comfort of your home.`}
         elements={homeTution}
       />
     </div>
